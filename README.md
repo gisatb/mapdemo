@@ -5,7 +5,7 @@
 [![image](https://img.shields.io/conda/vn/conda-forge/mapdemo.svg)](https://anaconda.org/conda-forge/mapdemo)
 
 
-**A python pacakge used for web map application**
+**A python package used for web map application**
 
 
 -   Free software: MIT License

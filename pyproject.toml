@@ -4,7 +4,7 @@ version = "0.0.1"
 dynamic = [
     "dependencies",
 ]
-description = "A python pacakge used for web map application"
+description = "A python package used for web map application"
 readme = "README.md"
 requires-python = ">=3.8"
 keywords = [

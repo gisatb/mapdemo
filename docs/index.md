@@ -4,7 +4,7 @@
 [![image](https://img.shields.io/pypi/v/mapdemo.svg)](https://pypi.python.org/pypi/mapdemo)
 
 
-**A python pacakge used for web map application**
+**A python package used for web map application**
 
 
 -   Free software: MIT License
