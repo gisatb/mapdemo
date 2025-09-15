@@ -83,6 +83,8 @@ nav:
         - examples/intro.ipynb
         - examples/intro.ipynb
         - examples/ipyleaflet.ipynb
+        - examples/csv.ipynb
     - API Reference:
           - mapdemo module: mapdemo.md
           - common module: common.md
+          - utils module: utils.md

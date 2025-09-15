@@ -33,7 +33,7 @@ class Map(ipyleaflet.Map):
 
 
     def add_basemap(self, name,**kwargs):
-        """Adds a basemap to the cuurent map
+        """Adds a basemap to the current map
 
         Args:
             name (str or object): The name of the basemap as a string, or an object
