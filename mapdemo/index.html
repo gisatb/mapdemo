@@ -15,14 +15,14 @@
         <link rel="canonical" href="https://gisatb.github.io/mapdemo/mapdemo/">
       
       
-        <link rel="prev" href="../examples/intro/">
+        <link rel="prev" href="../examples/csv/">
       
       
         <link rel="next" href="../common/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -206,7 +206,7 @@
         <a href="https://github.com/gisatb/mapdemo" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -252,7 +252,7 @@
       <a href="https://github.com/gisatb/mapdemo" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -477,6 +477,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ipyleaflet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ipyleaflet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/csv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Csv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -589,6 +658,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_basemap" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_basemap()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_geojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_geojson()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_layers_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_layers_control()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_shp" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_shp()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_tile_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_tile_layer()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -611,6 +749,29 @@
   
   <span class="md-ellipsis">
     common module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils module
     
   </span>
   
@@ -663,6 +824,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_basemap" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_basemap()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_geojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_geojson()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_layers_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_layers_control()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_shp" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_shp()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_tile_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_tile_layer()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -703,6 +933,581 @@
 
 
 
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="mapdemo.mapdemo.Map" class="doc doc-heading">
+        <code>
+Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
+        </code>
+
+
+
+<a href="#mapdemo.mapdemo.Map" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>This is the map class that inherits from ipyleaflet.Map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ipyleaflet</code></td>
+        <td><code>Map</code></td>
+        <td><p>The ipyleaflet.Map class.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Map</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Map</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This is the map class that inherits from ipyleaflet.Map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ipyleaflet (Map): The ipyleaflet.Map class.</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            center (list, optional): Set the center of the map. Defaults to [20, 0].</span>
+<span class="sd">            zoom (int, optional): Set the zoom level of the map. Defaults to 2.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_tile_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a layer to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            url (_type_): url of the layer</span>
+<span class="sd">            name (_type_): Name of the layer added to the layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Tilelayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a basemap to the current map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str or object): The name of the basemap as a string, or an object</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: Basemap not found</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#if isinstance(name, str):</span>
+        <span class="c1">#   url=eval(f&quot;basemaps.{name}&quot;).build_url()</span>
+        <span class="c1">#   self.add_tile(url, name)</span>
+        <span class="c1">#else:</span>
+        <span class="c1">#   self.add(name)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">provider</span> <span class="o">=</span> <span class="n">basemaps</span>
+                <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+                    <span class="n">provider</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">provider</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+
+                <span class="n">url</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
+                <span class="n">attribution</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">attribution</span>
+
+                <span class="c1"># Add the provider as a TileLayer</span>
+                <span class="n">layer</span> <span class="o">=</span> <span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">attribution</span><span class="o">=</span><span class="n">attribution</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Basemap &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; not found: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_layers_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a layer control to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            position (str, optional): The position of the layer control. Defaults to &quot;topright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a GeoJSON layer to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (str, dict): GeoJSON Data as a string or a dictionary</span>
+<span class="sd">            name (str, optional): The name of the layer. Defaults to &quot;geojson&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;style&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+
+        <span class="k">if</span> <span class="s2">&quot;hover_style&quot;</span>  <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;hover_style&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span> 
+
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">GeoJSON</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_shp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;shp&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a shapefile to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (shp): Shapefile data as a shp</span>
+<span class="sd">            name (str, optional): THe name of shapefile . Defaults to &quot;shp&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="kn">import</span><span class="w"> </span><span class="nn">shapely</span><span class="c1">#shapefile</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">json</span> 
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">shapely</span><span class="o">.</span><span class="n">Reader</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">shp</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">__geo_interface__</span>
+
+        <span class="c1">#if &quot;style&quot; not in kwargs:</span>
+           <span class="c1"># kwargs[&#39;style&#39;] = {&#39;color&#39;:&#39;blue&#39;,&#39;weight&#39;:1,&#39;fillOpacity&#39;:0}</span>
+
+       <span class="c1"># if &quot;hover_style&quot;  not in kwargs:</span>
+           <span class="c1"># kwargs[&quot;hover_style&quot;] =  {&#39;fillColor&#39;: &#39;blue&#39;, &#39;fillOpacity&#39;: 0.5} </span>
+
+        <span class="c1">#layer = ipyleaflet.GeoJSON(data=data, name=name, **kwargs)</span>
+        <span class="c1">#self.add(layer)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#mapdemo.mapdemo.Map.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>center</code></td>
+        <td><code>list</code></td>
+        <td><p>Set the center of the map. Defaults to [20, 0].</p></td>
+        <td><code>[20, 0]</code></td>
+      </tr>
+      <tr>
+        <td><code>zoom</code></td>
+        <td><code>int</code></td>
+        <td><p>Set the zoom level of the map. Defaults to 2.</p></td>
+        <td><code>2</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        center (list, optional): Set the center of the map. Defaults to [20, 0].</span>
+<span class="sd">        zoom (int, optional): Set the zoom level of the map. Defaults to 2.</span>
+<span class="sd">    &quot;&quot;&quot;</span>        
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_basemap" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_basemap" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a basemap to the current map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str or object</code></td>
+        <td><p>The name of the basemap as a string, or an object</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>Basemap not found</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a basemap to the current map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        name (str or object): The name of the basemap as a string, or an object</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: Basemap not found</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#if isinstance(name, str):</span>
+    <span class="c1">#   url=eval(f&quot;basemaps.{name}&quot;).build_url()</span>
+    <span class="c1">#   self.add_tile(url, name)</span>
+    <span class="c1">#else:</span>
+    <span class="c1">#   self.add(name)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">provider</span> <span class="o">=</span> <span class="n">basemaps</span>
+            <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+                <span class="n">provider</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">provider</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+
+            <span class="n">url</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
+            <span class="n">attribution</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">attribution</span>
+
+            <span class="c1"># Add the provider as a TileLayer</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">attribution</span><span class="o">=</span><span class="n">attribution</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Basemap &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; not found: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_geojson" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;geojson&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_geojson" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a GeoJSON layer to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>data</code></td>
+        <td><code>str, dict</code></td>
+        <td><p>GeoJSON Data as a string or a dictionary</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>The name of the layer. Defaults to "geojson".</p></td>
+        <td><code>&#39;geojson&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a GeoJSON layer to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str, dict): GeoJSON Data as a string or a dictionary</span>
+<span class="sd">        name (str, optional): The name of the layer. Defaults to &quot;geojson&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;style&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+
+    <span class="k">if</span> <span class="s2">&quot;hover_style&quot;</span>  <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;hover_style&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span> 
+
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">GeoJSON</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_layers_control" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_layers_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_layers_control" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a layer control to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the layer control. Defaults to "topright".</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_layers_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a layer control to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        position (str, optional): The position of the layer control. Defaults to &quot;topright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>        
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_shp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_shp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;shp&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_shp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a shapefile to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>data</code></td>
+        <td><code>shp</code></td>
+        <td><p>Shapefile data as a shp</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>THe name of shapefile . Defaults to "shp".</p></td>
+        <td><code>&#39;shp&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_shp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;shp&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a shapefile to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (shp): Shapefile data as a shp</span>
+<span class="sd">        name (str, optional): THe name of shapefile . Defaults to &quot;shp&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>        
+    <span class="kn">import</span><span class="w"> </span><span class="nn">shapely</span><span class="c1">#shapefile</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span> 
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">shapely</span><span class="o">.</span><span class="n">Reader</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">shp</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">__geo_interface__</span>
+
+    <span class="c1">#if &quot;style&quot; not in kwargs:</span>
+       <span class="c1"># kwargs[&#39;style&#39;] = {&#39;color&#39;:&#39;blue&#39;,&#39;weight&#39;:1,&#39;fillOpacity&#39;:0}</span>
+
+   <span class="c1"># if &quot;hover_style&quot;  not in kwargs:</span>
+       <span class="c1"># kwargs[&quot;hover_style&quot;] =  {&#39;fillColor&#39;: &#39;blue&#39;, &#39;fillOpacity&#39;: 0.5} </span>
+
+    <span class="c1">#layer = ipyleaflet.GeoJSON(data=data, name=name, **kwargs)</span>
+    <span class="c1">#self.add(layer)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_tile_layer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_tile_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_tile_layer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a layer to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>url</code></td>
+        <td><code>_type_</code></td>
+        <td><p>url of the layer</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>_type_</code></td>
+        <td><p>Name of the layer added to the layer</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_tile_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a layer to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        url (_type_): url of the layer</span>
+<span class="sd">        name (_type_): Name of the layer added to the layer</span>
+<span class="sd">    &quot;&quot;&quot;</span>        
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Tilelayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
 
 
@@ -809,7 +1614,7 @@
       <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../js/timeago.min.js"></script>
       
