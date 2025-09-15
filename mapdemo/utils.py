@@ -1,4 +1,4 @@
-"""This is the utils module that cintain utility functions from the mapdemo packacge
+"""This is the utils module that cintain utility functions from the mapdemo package
 """
 
 
