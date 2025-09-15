@@ -21,5 +21,41 @@ class Map(ipyleaflet.Map):
         else:
             self.add(name)
 
-    def add_layer_control(self, postion="topright"):
-        self.add_control(ipyleaflet.LayersControl(postion=postion) )        
+    def add_layer_control(self, position="topright"):
+        self.add_control(ipyleaflet.LayersControl(position=position))  
+
+    def add_geojson(self, data, name="geojson", **kwargs):
+
+        import json
+
+        if isinstance(data, str):
+            with open(data) as f:
+                data = json.load(f)
+
+        if "style" not in kwargs:
+            kwargs['style'] = {'color':'blue','weight':1,'fillOpacity':0}
+
+        if "hover_style"  not in kwargs:
+            kwargs["hover_style"] =  {'fillColor': 'blue', 'fillOpacity': 0.5} 
+
+        layer = ipyleaflet.GeoJSON(data=data, name=name, **kwargs)
+        self.add(layer)
+
+    def add_shp(self, data, name="shp", **kwargs):
+        
+        import shapely#shapefile
+        import json 
+
+        if isinstance(data, str):
+            with shapely.Reader(data) as shp:
+                data = shp.__geo_interface__
+
+        #if "style" not in kwargs:
+           # kwargs['style'] = {'color':'blue','weight':1,'fillOpacity':0}
+
+       # if "hover_style"  not in kwargs:
+           # kwargs["hover_style"] =  {'fillColor': 'blue', 'fillOpacity': 0.5} 
+
+        #layer = ipyleaflet.GeoJSON(data=data, name=name, **kwargs)
+        #self.add(layer)
+        self.add_geojson(data, name, **kwargs)
