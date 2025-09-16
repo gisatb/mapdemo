@@ -484,12 +484,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/intro/" class="md-nav__link">
+      <a href="../examples/vector/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Intro
+    Vector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raster
     
   </span>
   
@@ -513,6 +536,52 @@
   
   <span class="md-ellipsis">
     Ipyleaflet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ipywidgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ipywidgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ipywidegets_event/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ipywidegets event
     
   </span>
   
@@ -696,9 +765,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_image()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mapdemo.mapdemo.Map.add_layers_control" class="md-nav__link">
     <span class="md-ellipsis">
       add_layers_control()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_opacity_slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_opacity_slider()
     </span>
   </a>
   
@@ -717,6 +804,24 @@
   <a href="#mapdemo.mapdemo.Map.add_tile_layer" class="md-nav__link">
     <span class="md-ellipsis">
       add_tile_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_widget()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_zoom_slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_zoom_slider()
     </span>
   </a>
   
@@ -862,9 +967,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_image()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mapdemo.mapdemo.Map.add_layers_control" class="md-nav__link">
     <span class="md-ellipsis">
       add_layers_control()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_opacity_slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_opacity_slider()
     </span>
   </a>
   
@@ -883,6 +1006,24 @@
   <a href="#mapdemo.mapdemo.Map.add_tile_layer" class="md-nav__link">
     <span class="md-ellipsis">
       add_tile_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_widget()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_zoom_slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_zoom_slider()
     </span>
   </a>
   
@@ -983,11 +1124,40 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the map.</span>
 
-<span class="sd">        Args:</span>
+<span class="sd">       S Args:</span>
 <span class="sd">            center (list, optional): Set the center of the map. Defaults to [20, 0].</span>
 <span class="sd">            zoom (int, optional): Set the zoom level of the map. Defaults to 2.</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="k">if</span> <span class="s2">&quot;scroll_wheel_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;scroll_wheel_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># Optional controls flags</span>
+        <span class="c1">#layer_control = kwargs.pop(&quot;layer_control&quot;, False)</span>
+        <span class="c1"># fullscreen_control = kwargs.pop(&quot;fullscreen_control&quot;, True) </span>
+        <span class="k">if</span> <span class="s2">&quot;add_layers_control&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">layer_control_flag</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">else</span><span class="p">:</span>
+          <span class="n">layer_control_flag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;add_layers_control&quot;</span><span class="p">]</span>
+        <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;add_layers_control&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  
+
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Add controls based on flags</span>
+        <span class="c1">#self.add_layers_control()</span>
+        <span class="c1">#if layer_control: self.add_layers_control()</span>
+        <span class="c1"># if fullscreen_control: self.add_fullscreen_control()</span>
+        <span class="k">if</span> <span class="n">layer_control_flag</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_layers_control</span><span class="p">()</span>
+
+
+        <span class="c1"># -------- Utility to remove duplicates -------- #</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">replace_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">control_type</span><span class="p">,</span> <span class="n">new_control</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">control_type</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">new_control</span><span class="p">)</span>        
+
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_tile_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1033,13 +1203,16 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 
+    <span class="c1">#def add_layers_control(self, position=&quot;topright&quot;):</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_layers_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a layer control to the map</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            position (str, optional): The position of the layer control. Defaults to &quot;topright&quot;.</span>
 <span class="sd">        &quot;&quot;&quot;</span>        
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
+        <span class="c1">#self.add_control(ipyleaflet.LayersControl(position=position))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">replace_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
+
 
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1088,6 +1261,102 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="c1">#layer = ipyleaflet.GeoJSON(data=data, name=name, **kwargs)</span>
         <span class="c1">#self.add(layer)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">bounds</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a image overlay to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            url (str): The URL of the image</span>
+<span class="sd">            bounds (list): The bounds of the layer</span>
+<span class="sd">            name (str, optional): The name of the layer. Defaults to &quot;image&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ImageOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;raster&quot;</span><span class="p">,</span><span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
+        <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;please install the localtileserver package&quot;</span><span class="p">)</span>
+
+        <span class="n">client</span> <span class="o">=</span><span class="n">TileClient</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">layer</span><span class="o">=</span><span class="n">get_leaflet_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">zoom_to_layer</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_zoom_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Zoom level&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a zoom slider to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            description (str, optional): Name of the zoom slider. Defaults to &quot;Zoom level&quot;.</span>
+<span class="sd">            min (int, optional): Min value of zoom slider. Defaults to 0.</span>
+<span class="sd">            max (int, optional): Max value of the zoom slider. Defaults to 18.</span>
+<span class="sd">            value (int, optional): value of the zoom slider. Defaults to 10.</span>
+<span class="sd">            position (str, optional): Position of the zoom slider. Defaults to &quot;topright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">zoom_slider</span><span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+            <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="nb">max</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span>
+        <span class="p">)</span> 
+
+        <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">zoom_slider</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">jslink</span><span class="p">((</span><span class="n">zoom_slider</span><span class="p">,</span><span class="s2">&quot;value&quot;</span><span class="p">),(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;zoom&#39;</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            widget (_type_): _description_</span>
+<span class="sd">            position (str, optional): Position of the widget. Defaults to &quot;topright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">control</span> <span class="o">=</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_opacity_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Opacity&quot;</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">},):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add an opacity slider to the map</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            layer_index (int, optional): The layer to which the opacity slider is added. Defaults to -1.</span>
+<span class="sd">            description (str, optional): the description of the opacity silder. Defaults to &quot;Opacity&quot;.</span>
+<span class="sd">            position (str, optional): The position of the opacity slider. Defaults to &quot;topright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span>
+        <span class="n">opacity_slider</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span>
+            <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">opacity</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">upadate_opacity</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+           <span class="n">layer</span><span class="o">.</span><span class="n">opacity</span><span class="o">=</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span>
+
+        <span class="n">opacity_slider</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">upadate_opacity</span><span class="p">,</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>   
+
+        <span class="n">control</span> <span class="o">=</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">opacity_slider</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">basemaps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+
+        <span class="n">basemap_selector</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+            <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+                <span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Esri.WorldImagery&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Esri.NatGeoWorldMap&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basemap&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">update_basemap</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">])</span>
+
+        <span class="n">basemap_selector</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">update_basemap</span><span class="p">,</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+        <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">basemap_selector</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 </code></pre></div>
         </details>
 
@@ -1119,42 +1388,43 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <div class="doc doc-contents ">
 
       <p>Initialize the map.</p>
+<p>S Args:
+     center (list, optional): Set the center of the map. Defaults to [20, 0].
+     zoom (int, optional): Set the zoom level of the map. Defaults to 2.</p>
 
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>center</code></td>
-        <td><code>list</code></td>
-        <td><p>Set the center of the map. Defaults to [20, 0].</p></td>
-        <td><code>[20, 0]</code></td>
-      </tr>
-      <tr>
-        <td><code>zoom</code></td>
-        <td><code>int</code></td>
-        <td><p>Set the zoom level of the map. Defaults to 2.</p></td>
-        <td><code>2</code></td>
-      </tr>
-  </tbody>
-</table>
         <details class="quote">
           <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the map.</span>
 
-<span class="sd">    Args:</span>
+<span class="sd">   S Args:</span>
 <span class="sd">        center (list, optional): Set the center of the map. Defaults to [20, 0].</span>
 <span class="sd">        zoom (int, optional): Set the zoom level of the map. Defaults to 2.</span>
-<span class="sd">    &quot;&quot;&quot;</span>        
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="k">if</span> <span class="s2">&quot;scroll_wheel_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;scroll_wheel_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Optional controls flags</span>
+    <span class="c1">#layer_control = kwargs.pop(&quot;layer_control&quot;, False)</span>
+    <span class="c1"># fullscreen_control = kwargs.pop(&quot;fullscreen_control&quot;, True) </span>
+    <span class="k">if</span> <span class="s2">&quot;add_layers_control&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">layer_control_flag</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">layer_control_flag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;add_layers_control&quot;</span><span class="p">]</span>
+    <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;add_layers_control&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  
+
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="c1"># Add controls based on flags</span>
+    <span class="c1">#self.add_layers_control()</span>
+    <span class="c1">#if layer_control: self.add_layers_control()</span>
+    <span class="c1"># if fullscreen_control: self.add_fullscreen_control()</span>
+    <span class="k">if</span> <span class="n">layer_control_flag</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_layers_control</span><span class="p">()</span>
+
+
+    <span class="c1"># -------- Utility to remove duplicates -------- #</span>
 </code></pre></div>
         </details>
     </div>
@@ -1251,6 +1521,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 
+
   <div class="doc doc-object doc-method">
 
 
@@ -1325,6 +1596,71 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 
+<h3 id="mapdemo.mapdemo.Map.add_image" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">bounds</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_image" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a image overlay to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>url</code></td>
+        <td><code>str</code></td>
+        <td><p>The URL of the image</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>bounds</code></td>
+        <td><code>list</code></td>
+        <td><p>The bounds of the layer</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>The name of the layer. Defaults to "image".</p></td>
+        <td><code>&#39;image&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">bounds</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a image overlay to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        url (str): The URL of the image</span>
+<span class="sd">        bounds (list): The bounds of the layer</span>
+<span class="sd">        name (str, optional): The name of the layer. Defaults to &quot;image&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ImageOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h3 id="mapdemo.mapdemo.Map.add_layers_control" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">add_layers_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span></code>
 
@@ -1362,12 +1698,89 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 <span class="sd">    Args:</span>
 <span class="sd">        position (str, optional): The position of the layer control. Defaults to &quot;topright&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>        
-    <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
+    <span class="c1">#self.add_control(ipyleaflet.LayersControl(position=position))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">replace_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>  
 </code></pre></div>
         </details>
     </div>
 
   </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_opacity_slider" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_opacity_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Opacity&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">})</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_opacity_slider" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add an opacity slider to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>layer_index</code></td>
+        <td><code>int</code></td>
+        <td><p>The layer to which the opacity slider is added. Defaults to -1.</p></td>
+        <td><code>-1</code></td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td><code>str</code></td>
+        <td><p>the description of the opacity silder. Defaults to "Opacity".</p></td>
+        <td><code>&#39;Opacity&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the opacity slider. Defaults to "topright".</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_opacity_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Opacity&quot;</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">},):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add an opacity slider to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        layer_index (int, optional): The layer to which the opacity slider is added. Defaults to -1.</span>
+<span class="sd">        description (str, optional): the description of the opacity silder. Defaults to &quot;Opacity&quot;.</span>
+<span class="sd">        position (str, optional): The position of the opacity slider. Defaults to &quot;topright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span>
+    <span class="n">opacity_slider</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">opacity</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">upadate_opacity</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+       <span class="n">layer</span><span class="o">.</span><span class="n">opacity</span><span class="o">=</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span>
+
+    <span class="n">opacity_slider</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">upadate_opacity</span><span class="p">,</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>   
+
+    <span class="n">control</span> <span class="o">=</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">opacity_slider</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
 
 
 
@@ -1498,6 +1911,149 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     </div>
 
   </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_widget" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_widget" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p><em>summary</em></p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>widget</code></td>
+        <td><code>_type_</code></td>
+        <td><p><em>description</em></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>Position of the widget. Defaults to "topright".</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        widget (_type_): _description_</span>
+<span class="sd">        position (str, optional): Position of the widget. Defaults to &quot;topright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">control</span> <span class="o">=</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_zoom_slider" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_zoom_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Zoom level&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_zoom_slider" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a zoom slider to the map</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>description</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the zoom slider. Defaults to "Zoom level".</p></td>
+        <td><code>&#39;Zoom level&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>min</code></td>
+        <td><code>int</code></td>
+        <td><p>Min value of zoom slider. Defaults to 0.</p></td>
+        <td><code>0</code></td>
+      </tr>
+      <tr>
+        <td><code>max</code></td>
+        <td><code>int</code></td>
+        <td><p>Max value of the zoom slider. Defaults to 18.</p></td>
+        <td><code>18</code></td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td><code>int</code></td>
+        <td><p>value of the zoom slider. Defaults to 10.</p></td>
+        <td><code>4</code></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>Position of the zoom slider. Defaults to "topright".</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_zoom_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Zoom level&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a zoom slider to the map</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        description (str, optional): Name of the zoom slider. Defaults to &quot;Zoom level&quot;.</span>
+<span class="sd">        min (int, optional): Min value of zoom slider. Defaults to 0.</span>
+<span class="sd">        max (int, optional): Max value of the zoom slider. Defaults to 18.</span>
+<span class="sd">        value (int, optional): value of the zoom slider. Defaults to 10.</span>
+<span class="sd">        position (str, optional): Position of the zoom slider. Defaults to &quot;topright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">zoom_slider</span><span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="nb">max</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span>
+    <span class="p">)</span> 
+
+    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">zoom_slider</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+    <span class="n">widgets</span><span class="o">.</span><span class="n">jslink</span><span class="p">((</span><span class="n">zoom_slider</span><span class="p">,</span><span class="s2">&quot;value&quot;</span><span class="p">),(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;zoom&#39;</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
 
 
 

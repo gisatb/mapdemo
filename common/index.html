@@ -484,12 +484,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/intro/" class="md-nav__link">
+      <a href="../examples/vector/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Intro
+    Vector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/raster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raster
     
   </span>
   
@@ -513,6 +536,52 @@
   
   <span class="md-ellipsis">
     Ipyleaflet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ipywidgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ipywidgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ipywidegets_event/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ipywidegets event
     
   </span>
   
@@ -682,6 +751,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mapdemo.common.Map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_rast_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_rast_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_vect_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_vect_layer()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mapdemo.common.hello_world" class="md-nav__link">
     <span class="md-ellipsis">
       hello_world()
@@ -774,6 +885,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mapdemo.common.Map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_rast_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_rast_layer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.common.Map.add_vect_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_vect_layer()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mapdemo.common.hello_world" class="md-nav__link">
     <span class="md-ellipsis">
       hello_world()
@@ -830,6 +983,231 @@
 
 
 
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="mapdemo.common.Map" class="doc doc-heading">
+        <code>
+Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
+        </code>
+
+
+
+<a href="#mapdemo.common.Map" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Simple, ready-to-use Map with optional controls, avoids duplicates.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/common.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Map</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Map</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simple, ready-to-use Map with optional controls, avoids duplicates.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">scroll_wheel_zoom</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;scroll_wheel_zoom&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;600px&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Optional controls (default)</span>
+        <span class="n">layer_control</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;layer_control&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">fullscreen_control</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;fullscreen_control&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_control</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;draw_control&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">scale_control</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;scale_control&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">measure_control</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;measure_control&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Initialize base ipyleaflet.Map</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="n">scroll_wheel_zoom</span><span class="o">=</span><span class="n">scroll_wheel_zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+        <span class="c1"># Add controls</span>
+        <span class="k">if</span> <span class="n">layer_control</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_layer_control</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">fullscreen_control</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_fullscreen_control</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">draw_control</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_draw_control</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">scale_control</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_scale_control</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">measure_control</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_measure_control</span><span class="p">()</span>
+
+    <span class="c1"># -------- Utility to replace existing control -------- #</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_replace_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">control_type</span><span class="p">,</span> <span class="n">new_control</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">control_type</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">new_control</span><span class="p">)</span>
+
+    <span class="c1"># -------- Control Methods -------- #</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_replace_control</span><span class="p">(</span><span class="n">LayersControl</span><span class="p">,</span> <span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_fullscreen_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_replace_control</span><span class="p">(</span><span class="n">FullScreenControl</span><span class="p">,</span> <span class="n">FullScreenControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_draw_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_replace_control</span><span class="p">(</span><span class="n">DrawControl</span><span class="p">,</span> <span class="n">DrawControl</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_scale_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomleft&quot;</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">imperial</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_replace_control</span><span class="p">(</span><span class="n">ScaleControl</span><span class="p">,</span> <span class="n">ScaleControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">metric</span><span class="p">,</span> <span class="n">imperial</span><span class="o">=</span><span class="n">imperial</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_measure_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">,</span> <span class="n">primary_length_unit</span><span class="o">=</span><span class="s2">&quot;kilometers&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_replace_control</span><span class="p">(</span>
+            <span class="n">MeasureControl</span><span class="p">,</span>
+            <span class="n">MeasureControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="n">primary_length_unit</span><span class="o">=</span><span class="n">primary_length_unit</span><span class="p">)</span>
+        <span class="p">)</span>
+
+     <span class="c1"># ---------------- Layer Adding Methods ---------------- #</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_rast_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a raster tile layer (TileLayer) with name for LayersControl.&quot;&quot;&quot;</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_vect_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add vector layer (GeoJSON) with name for LayersControl.&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">ipyleaflet</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">GeoJSON</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="c1"># Generic add_layer wrapper</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add any ipyleaflet layer with a name.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">):</span>
+            <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Layer&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_raster_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># Check if a layer with same name or URL already exists</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">TileLayer</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="n">url</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; already added, skipping.&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="n">tile</span> <span class="o">=</span> <span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">tile</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_vector_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># Check if a vector layer with the same name exists</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vector layer &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; already added. Skipping.&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="c1"># Add layer if not duplicate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">GeoJSON</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.common.Map.add_layer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.common.Map.add_layer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add any ipyleaflet layer with a name.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/common.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add any ipyleaflet layer with a name.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">):</span>
+        <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Layer&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.common.Map.add_rast_layer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_rast_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.common.Map.add_rast_layer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a raster tile layer (TileLayer) with name for LayersControl.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/common.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_rast_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a raster tile layer (TileLayer) with name for LayersControl.&quot;&quot;&quot;</span>
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.common.Map.add_vect_layer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_vect_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.common.Map.add_vect_layer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add vector layer (GeoJSON) with name for LayersControl.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/common.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_vect_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add vector layer (GeoJSON) with name for LayersControl.&quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">ipyleaflet</span>
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">GeoJSON</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
 
 
