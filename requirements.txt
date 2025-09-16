@@ -1,4 +1,6 @@
 numpy
 ipyleaflet
+localtileserver
 shapely
 pandas
+ipywidgets
