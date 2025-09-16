@@ -81,8 +81,11 @@ nav:
     - Report Issues: https://github.com/gisatb/mapdemo/issues
     - Examples:
         - examples/intro.ipynb
-        - examples/intro.ipynb
+        - examples/vector.ipynb
+        - examples/raster.ipynb
         - examples/ipyleaflet.ipynb
+        - examples/ipywidgets.ipynb
+        - examples/ipywidegets_event.ipynb
         - examples/csv.ipynb
     - API Reference:
           - mapdemo module: mapdemo.md

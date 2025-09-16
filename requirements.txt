@@ -2,3 +2,4 @@ numpy
 ipyleaflet
 shapely
 pandas
+ipywidgets
