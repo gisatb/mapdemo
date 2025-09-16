@@ -181,7 +181,7 @@ class Map(ipyleaflet.Map):
 
 
     def add_zoom_slider(self, description="Zoom level", min=0, max=18, value=4, position="topright"):
-        """Addd a zoom slider to the map
+        """Add a zoom slider to the map
 
         Args:
             description (str, optional): Name of the zoom slider. Defaults to "Zoom level".
@@ -208,7 +208,7 @@ class Map(ipyleaflet.Map):
         control =ipyleaflet.WidgetControl(widget=widget, position=position)
         self.add(control)
         
-    def add_opacity_slider(self, layer_index=-1, description="Opacity",position="topright",style={"description_width": "inital"},):
+    def add_opacity_slider(self, layer_index=-1, description="Opacity",position="topright",style={"description_width": "initial"},):
         """Add an opacity slider to the map
 
         Args:
