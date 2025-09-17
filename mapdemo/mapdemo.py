@@ -165,7 +165,16 @@ class Map(ipyleaflet.Map):
         self.add(layer)
 
     def add_raster(self, data, name="raster",zoom_to_layer=True, **kwargs):
+        """Add raster layer to the map using tileserver 
 
+        Args:
+            data (_type_): Raster data
+            name (str, optional): Name of the raster layer. Defaults to "raster".
+            zoom_to_layer (bool, optional): zoom to the layer which one added. Defaults to True.
+
+        Raises:
+            ImportError: package not found
+        """
         try:
             from localtileserver import TileClient, get_leaflet_tile_layer
         except ImportError:
