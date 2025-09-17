@@ -12,13 +12,9 @@
         <meta name="author" content="gisatb">
       
       
-        <link rel="canonical" href="https://gisatb.github.io/mapdemo/examples/ipyleaflet/">
+        <link rel="canonical" href="https://gisatb.github.io/mapdemo/examples/folium/">
       
       
-        <link rel="prev" href="../raster/">
-      
-      
-        <link rel="next" href="../ipywidgets/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Ipyleaflet - mapdemo</title>
+        <title>Folium - mapdemo</title>
       
     
     
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ipyleaflet
+              Folium
             
           </span>
         </div>
@@ -415,20 +411,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -444,7 +438,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -524,17 +518,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ipyleaflet/" class="md-nav__link">
         
   
   
@@ -545,7 +532,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -770,7 +756,7 @@
               <article class="md-content__inner md-typeset">
                 
 
-    <a href="/mapdemo/examples/ipyleaflet/ipyleaflet.ipynb" title="Download Notebook" class="md-content__button md-icon">
+    <a href="/mapdemo/examples/folium/folium.ipynb" title="Download Notebook" class="md-content__button md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
     </a>
 
@@ -783,7 +769,7 @@
   
 
 
-  <h1>Ipyleaflet</h1>
+  <h1>Folium</h1>
 
 <script>
 (function (global, factory) {
@@ -945,34 +931,6 @@
           notice.hidden = true
         }, 1000)
       })
-</script>
-<script>
-(function() {
-  function addWidgetsRenderer() {
-    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
-    var scriptElement = document.createElement('script');
-    
-    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    
-    var widgetState;
-
-    // Fallback for older version:
-    try {
-      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
-
-      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        
-        var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
-        
-      }
-    } catch(e) {}
-
-    scriptElement.src = widgetRendererSrc;
-    document.body.appendChild(scriptElement);
-  }
-
-  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
-}());
 </script>
 <style type="text/css">
     pre { line-height: 125%; }
@@ -1250,12 +1208,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=203a099c">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a74740c3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -1268,21 +1226,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mapdemo</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">folium</span>
+
+<span class="n">m</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="mf">45.5236</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.6750</span><span class="p">),</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import mapdemo</div>
+<div class="clipboard-copy-txt" id="cell-1">import folium
+
+m=folium.Map(location=(45.5236, -122.6750), zoom_start=5)</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=07abae85">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5c7c1145">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -1295,21 +1257,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipyleaflet</span><span class="w"> </span><span class="kn">import</span> <span class="n">basemaps</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">from ipyleaflet import basemaps</div>
+<div class="clipboard-copy-txt" id="cell-2">m</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=469992e7">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=34c43bfa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -1322,21 +1284,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">url</span> <span class="o">=</span><span class="nb">eval</span><span class="p">(</span><span class="s2">"basemaps.OpenTopoMap"</span><span class="p">)</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mapdemo.foliummap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mapdem</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">url =eval("basemaps.OpenTopoMap").build_url()</div>
+<div class="clipboard-copy-txt" id="cell-3">import mapdemo.foliummap as mapdem</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fcc6c5ea">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7890fe07">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -1349,30 +1311,140 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">mapdemo</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s2">"NASAGIBS.ViirsEarthAtNight2012"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="n">mapdem</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">],</span><span class="n">zoom</span><span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">m</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">m = mapdemo.Map()
-m.add_basemap("NASAGIBS.ViirsEarthAtNight2012")
+<div class="clipboard-copy-txt" id="cell-4">m=mapdem.Map(center=[40,-100],zoom= 4)
 m</div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-<div class="jupyter-widgets jp-OutputArea-output jp-OutputArea-executeResult" id="57dd0710-2544-4c41-a32d-3cbb2f3755fe" tabindex="0">
-<script type="text/javascript">
-var element = document.getElementById('57dd0710-2544-4c41-a32d-3cbb2f3755fe');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "60e80e843acf4ca2911c93942189fec7"}
-</script>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0693cd52">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span><span class="p">,</span> <span class="n">get_folium_tile_layer</span><span class="p">,</span> <span class="n">examples</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">folium</span><span class="w"> </span><span class="kn">import</span> <span class="n">Map</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5">from localtileserver import TileClient, get_leaflet_tile_layer, get_folium_tile_layer, examples
+from folium import Map</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5b8ddf4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">client</span><span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">get_san_francisco</span><span class="p">()</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">get_folium_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">(),</span> <span class="n">zoom_start</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">client= examples.get_san_francisco()
+
+t=get_folium_tile_layer(client)
+
+m = Map(location=client.center(), zoom_start=client.default_zoom)
+t.add_to(m)
+m</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de4fdee8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mapdemo.foliummap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mapdem</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-7">import mapdemo.foliummap as mapdem</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=68624729">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">mapdem</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">],</span><span class="n">zoom</span><span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">url</span><span class="o">=</span><span class="s2">"https://github.com/opengeos/datasets/releases/download/raster/srtm90.tif"</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_raster</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"terrain"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"srtm"</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">m = mapdem.Map(center=[40,-100],zoom= 4)
+url="https://github.com/opengeos/datasets/releases/download/raster/srtm90.tif"
+m.add_raster(url, colormap="terrain", name="srtm")
+m
+</div>
 </div>
 </div>
 </div>
@@ -1381,9 +1453,6 @@ var element = document.getElementById('57dd0710-2544-4c41-a32d-3cbb2f3755fe');
 </div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"1bd9720fef12480abad5254cc9522b1b": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets\/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "cursor": "grab"}}, "2caa37db30b64ec5bb9f8919e8d99ff4": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets\/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "cursor": "move"}}, "317e2c9f96114609a22d1f587e422762": {"model_name": "LeafletTileLayerModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a> contributors", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": null, "max_zoom": 19, "min_native_zoom": null, "min_zoom": 1, "name": "OpenStreetMap.Mapnik", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "pm_ignore", "tile_size", "tms", "zoom_offset"], "pane": "", "pm_ignore": true, "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "snap_ignore": true, "subitems": [], "tile_size": 256, "tms": false, "url": "https:\/\/tile.openstreetmap.org\/{z}\/{x}\/{y}.png", "visible": true, "zoom_offset": 0}}, "578fc15e893b4725bb067ce0e48405df": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets\/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets\/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets\/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d40da9aa4b8445878978347d5274bdf3": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets\/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "cursor": "grab"}}, "60e80e843acf4ca2911c93942189fec7": {"model_name": "LeafletMapModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [20, 0], "close_popup_on_click": true, "controls": ["IPY_MODEL_933fc05398084574a53eb76d87e6bd8a", "IPY_MODEL_8b0de97e62344e8fa4b6abd3dccdf7bd", "IPY_MODEL_732b88b768914a418e48af24181ba1cf"], "crs": {"name": "EPSG3857", "custom": false}, "default_style": "IPY_MODEL_1bd9720fef12480abad5254cc9522b1b", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_2caa37db30b64ec5bb9f8919e8d99ff4", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_317e2c9f96114609a22d1f587e422762", "IPY_MODEL_39395f38999c430fa188417565d0457d"], "layout": "IPY_MODEL_578fc15e893b4725bb067ce0e48405df", "left": 9007199254740991.0, "max_zoom": null, "min_zoom": null, "modisdate": "2025-09-16", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap"], "panes": {}, "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": true, "south": 0.0, "style": "IPY_MODEL_d40da9aa4b8445878978347d5274bdf3", "tabbable": null, "tap": true, "tap_tolerance": 15, "tooltip": null, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 2.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0}}, "933fc05398084574a53eb76d87e6bd8a": {"model_name": "LeafletZoomControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "8b0de97e62344e8fa4b6abd3dccdf7bd": {"model_name": "LeafletAttributionControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}, "732b88b768914a418e48af24181ba1cf": {"model_name": "LeafletLayersControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletLayersControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletLayersControlView", "collapsed": true, "options": ["collapsed", "position"], "position": "topright"}}, "39395f38999c430fa188417565d0457d": {"model_name": "LeafletTileLayerModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.20", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.20", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.20", "_view_name": "LeafletTileLayerView", "attribution": "Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA\/GSFC\/Earth Science Data and Information System (ESDIS) with funding provided by NASA\/HQ.", "base": false, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": null, "max_zoom": 18, "min_native_zoom": null, "min_zoom": 0, "name": "NASAGIBS.ViirsEarthAtNight2012", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "pm_ignore", "tile_size", "tms", "zoom_offset"], "pane": "", "pm_ignore": true, "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "snap_ignore": true, "subitems": [], "tile_size": 256, "tms": false, "url": "https:\/\/map1.vis.earthdata.nasa.gov\/wmts-webmerc\/VIIRS_CityLights_2012\/default\/\/GoogleMapsCompatible_Level8\/{z}\/{y}\/{x}.jpg", "visible": true, "zoom_offset": 0}}}, "version_major": 2, "version_minor": 0}
-</script>
 
         <style>
         ['pre { line-height: 125%; }\ntd.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\nspan.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\ntd.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\nspan.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\n.highlight-ipynb .hll { background-color: var(--jp-cell-editor-active-background) }\n.highlight-ipynb { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }\n.highlight-ipynb .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */\n.highlight-ipynb .err { color: var(--jp-mirror-editor-error-color) } /* Error */\n.highlight-ipynb .k { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword */\n.highlight-ipynb .o { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator */\n.highlight-ipynb .p { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation */\n.highlight-ipynb .ch { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Hashbang */\n.highlight-ipynb .cm { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Multiline */\n.highlight-ipynb .cp { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Preproc */\n.highlight-ipynb .cpf { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.PreprocFile */\n.highlight-ipynb .c1 { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Single */\n.highlight-ipynb .cs { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Special */\n.highlight-ipynb .kc { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Constant */\n.highlight-ipynb .kd { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Declaration */\n.highlight-ipynb .kn { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Namespace */\n.highlight-ipynb .kp { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Pseudo */\n.highlight-ipynb .kr { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Reserved */\n.highlight-ipynb .kt { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Type */\n.highlight-ipynb .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */\n.highlight-ipynb .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */\n.highlight-ipynb .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */\n.highlight-ipynb .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */\n.highlight-ipynb .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */\n.highlight-ipynb .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */\n.highlight-ipynb .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */\n.highlight-ipynb .mh { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Hex */\n.highlight-ipynb .mi { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer */\n.highlight-ipynb .mo { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Oct */\n.highlight-ipynb .sa { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Affix */\n.highlight-ipynb .sb { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Backtick */\n.highlight-ipynb .sc { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Char */\n.highlight-ipynb .dl { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Delimiter */\n.highlight-ipynb .sd { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Doc */\n.highlight-ipynb .s2 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Double */\n.highlight-ipynb .se { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Escape */\n.highlight-ipynb .sh { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Heredoc */\n.highlight-ipynb .si { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Interpol */\n.highlight-ipynb .sx { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Other */\n.highlight-ipynb .sr { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Regex */\n.highlight-ipynb .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */\n.highlight-ipynb .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */\n.highlight-ipynb .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */']
@@ -1411,7 +1480,7 @@ var element = document.getElementById('57dd0710-2544-4c41-a32d-3cbb2f3755fe');
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 15, 2025 09:54:16 UTC"><span class="timeago" datetime="2025-09-15T09:54:16+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 15, 2025 09:54:16 UTC">2025-09-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 17, 2025 13:10:35 UTC"><span class="timeago" datetime="2025-09-17T13:10:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 17, 2025 13:10:35 UTC">2025-09-17</span>
   </span>
 
     
@@ -1421,7 +1490,7 @@ var element = document.getElementById('57dd0710-2544-4c41-a32d-3cbb2f3755fe');
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 15, 2025 08:17:46 UTC"><span class="timeago" datetime="2025-09-15T08:17:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 15, 2025 08:17:46 UTC">2025-09-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 17, 2025 13:10:35 UTC"><span class="timeago" datetime="2025-09-17T13:10:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 17, 2025 13:10:35 UTC">2025-09-17</span>
   </span>
 
     

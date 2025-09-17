@@ -801,6 +801,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_raster" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_raster()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mapdemo.mapdemo.Map.add_shp" class="md-nav__link">
     <span class="md-ellipsis">
       add_shp()
@@ -1015,6 +1024,15 @@
   <a href="#mapdemo.mapdemo.Map.add_opacity_slider" class="md-nav__link">
     <span class="md-ellipsis">
       add_opacity_slider()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapdemo.mapdemo.Map.add_raster" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_raster()
     </span>
   </a>
   
@@ -1310,7 +1328,16 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;raster&quot;</span><span class="p">,</span><span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add raster layer to the map using tileserver </span>
 
+<span class="sd">        Args:</span>
+<span class="sd">            data (_type_): Raster data</span>
+<span class="sd">            name (str, optional): Name of the raster layer. Defaults to &quot;raster&quot;.</span>
+<span class="sd">            zoom_to_layer (bool, optional): zoom to the layer which one added. Defaults to True.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ImportError: package not found</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
@@ -1976,6 +2003,98 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
   </div>
 
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="mapdemo.mapdemo.Map.add_raster" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;raster&#39;</span><span class="p">,</span> <span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#mapdemo.mapdemo.Map.add_raster" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add raster layer to the map using tileserver </p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>data</code></td>
+        <td><code>_type_</code></td>
+        <td><p>Raster data</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the raster layer. Defaults to "raster".</p></td>
+        <td><code>&#39;raster&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>zoom_to_layer</code></td>
+        <td><code>bool</code></td>
+        <td><p>zoom to the layer which one added. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ImportError</code></td>
+        <td><p>package not found</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>mapdemo/mapdemo.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;raster&quot;</span><span class="p">,</span><span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add raster layer to the map using tileserver </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (_type_): Raster data</span>
+<span class="sd">        name (str, optional): Name of the raster layer. Defaults to &quot;raster&quot;.</span>
+<span class="sd">        zoom_to_layer (bool, optional): zoom to the layer which one added. Defaults to True.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ImportError: package not found</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;please install the localtileserver package&quot;</span><span class="p">)</span>
+
+    <span class="n">client</span> <span class="o">=</span><span class="n">TileClient</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">layer</span><span class="o">=</span><span class="n">get_leaflet_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">zoom_to_layer</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
 
 
 
