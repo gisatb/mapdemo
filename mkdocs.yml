@@ -51,7 +51,8 @@ plugins:
           allow_errors: false
           ignore: ["conf.py"]
           execute_ignore: ["vector.ipynb",
-                  "raster.ipynb",]
+                  "raster.ipynb",
+                  "folium.ipynb"]
 
 markdown_extensions:
     - admonition

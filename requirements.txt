@@ -4,3 +4,4 @@ localtileserver
 shapely
 pandas
 ipywidgets
+folium
