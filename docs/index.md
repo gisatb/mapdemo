@@ -13,4 +13,8 @@
 
 ## Features
 
--   TODO
+-   A create web maps using vector and raster data.
+-   Create interactive maps
+-   Visualize geospatial data
+-   Visualize raster data
+-   Visualize vector data
